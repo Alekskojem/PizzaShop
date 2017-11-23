@@ -1,2 +1,4 @@
 
 pizzashop.db
+public/app.js
+views/index.erb
