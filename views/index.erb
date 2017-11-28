@@ -3,29 +3,45 @@
 <div class='row'>
 
 	<% @products.each do |p| %>
+	
 	<div class='col'>
 		<%= p.title %>
 	</div>
+	
 	<div>
 		<img src='<%= p.path_to_image %>' />
 	</div>
+	
 	<div>
 		<%= p.description %>
 	</div>
-	<div>
-		Price: <%= p.price %> grn
-	</div>
+	
 	<div>
 		Size: <%= p.size %> sm
 	</div>
+	
 	<div>
-		<button class="btn btn-success btn-sm" onclick="add_to_cart(<%= p.id %>)"> Add to cart
-		</button>
+		price: <%= p.price %> grn
+	</div>
+	
+	<div>
+		<button class="btn btn-sm btn-success" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
 	</div>
 </div>
 <% end %>
+
 </div>
 </br>
 </br>
 
 <button class="btn btn-primary" onclick="something()">Click me!</button>
+
+<script type='text/javascript'>
+
+$(function() {
+
+	update_orders_input();
+
+});
+
+</script>
