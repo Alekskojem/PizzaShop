@@ -3,7 +3,7 @@
 <div class='row'>
 
 	<% @products.each do |p| %>
-	<div class='col-md-3'>
+	<div class='col'>
 		<%= p.title %>
 	</div>
 	<div>
@@ -19,9 +19,12 @@
 		Size: <%= p.size %> sm
 	</div>
 	<div>
-		<button type="button" class="btn btn-success btn-sm" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
+		<button class="btn btn-success btn-sm" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
 	</div>
+</div>
 <% end %>
 </div>
 </br>
-<button type="button" class="btn btn-primary" onclick="something()">Click me</button>
+</br>
+
+<button class="btn btn-primary" onclick="something()">Click me!</button>
