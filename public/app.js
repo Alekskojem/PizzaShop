@@ -28,7 +28,7 @@ function cart_get_number_of_items()
 	for(var i = 0; i < window.localStorage.length; i++)
 	{
 		var key = window.localStorage.key(i); // получаем ключ
-		   var value = window.localStorege.getitem(key); // получаем значение, в ruby: hh[key] = x
+		   var value = window.localStorage.getitem(key); // получаем значение, в ruby: hh[key] = x
 			
 			if(key.indexOf('product_') == 0)
 			
