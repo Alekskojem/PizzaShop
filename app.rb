@@ -35,13 +35,4 @@ end
 post '/cart' do
 	erb :hello
 	end
-post '/cart' do
 
-	@c = Client.new params[:client]
-	if @c.save
-		erb "<h2>Спасибо, вы записались!</h2>"
-	else
-		@error = @c.errors.full_messages.first
-		erb :hello
-	end
-end
