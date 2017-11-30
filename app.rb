@@ -33,6 +33,22 @@ get '/contacts' do
 end
 
 post '/cart' do
-	erb 'Hello'
+	orders_input = params[:orders]
+	@orders = parse_orders_input orders_input
+	erb 'Hello! #{@orders.inspect}'
 	end
+def parse_orders_input orders_input
+	s1 = orders_input.split(/,/)
+	arr = []
+	s1.each do |x|
+		s2 = x.split(/\=/)
+
+		id = s3[1]
+		cnt = s2[1]
+
+		arr2 = [id, cnt]
+		arr.push arr2
+	end
+	return arr
+end
 
