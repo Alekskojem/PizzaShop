@@ -9,8 +9,8 @@ set :database, "sqlite3:pizzashop.db"
 class Product < ActiveRecord::Base
 end
 
-class Client < ActiveRecord::Base
-end
+#class Client < ActiveRecord::Base
+#end
 #validates :name, presence: true, length: { minimum: 3 }
 #validates :phone, presence: true
 #validates :adress, presence: true
