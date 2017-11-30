@@ -1,0 +1,25 @@
+<h2>Ваши координаты</h2>
+<p>На этой странице вы можете указать свои контактные данные и адрес доставки пиццы.</p>
+
+<form action="/hello" method="POST" role="form">
+
+  <div class="form-group">
+    <label>Ваше имя</label>
+    <input name="client[name]" type="text" class="form-control" placeholder="Ваше имя" value="<%= @c.name %>">
+  </div>
+
+  <div class="form-group">
+    <label>Ваш телефон</label>
+    <input name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон" value="<%= @c.phone %>">
+  </div>
+
+   <div class="form-group">
+    <label>Адресс доставки</label>
+    <input name="client[adress]" type="text" class="form-control" placeholder="Ваш адресс" value="<%= @c.adress %>">
+  </div>
+
+   <button type="submit" class="btn btn-primary">Доставить</button>
+
+</form>
+
+
