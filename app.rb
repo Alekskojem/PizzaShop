@@ -34,21 +34,21 @@ end
 
 
 post '/cart' do
-	orders_input = params[:orders]
-	@items = parse_orders_input orders_input
+	orders_input = params[:orders] # Получаем orders из параметров.
+	@items = parse_orders_input orders_input # Глобальная переменная коорую будем использовать во вьюхе
 
-	@items.each do |item|
-		item[0] = Product.find(item[0])
+	@items.each do |item| # Делаем запрос для каждого элемента
+		item[0] = Product.find(item[0]) # Вывод объектана на страничку сайта
 	end
 
 	erb :cart
 end
 
-def parse_orders_input orders_input
+def parse_orders_input orders_input # Функция которая будет возвращать нам данные массива, строки которую разбивали.
 	s1 = orders_input.split(/,/)
 	arr = []
 	s1.each do |x|
-		s2 = x.split(/\=/)
+		s2 = x.split(/\=/) # Регулярное віражение в скобках с слешами.
 
 		s3 = s2[0].split(/_/)
 
