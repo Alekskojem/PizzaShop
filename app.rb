@@ -34,8 +34,8 @@ end
 
 
 post '/cart' do
-	orders_input = params[:orders] # Получаем orders из параметров.
-	@items = parse_orders_input orders_input # Глобальная переменная коорую будем использовать во вьюхе
+	@orders_input = params[:orders] # Получаем orders из параметров.
+	@items = parse_orders_input @orders_input # Глобальная переменная коорую будем использовать во вьюхе
 
 	@items.each do |item| # Делаем запрос для каждого элемента
 		item[0] = Product.find(item[0]) # Вывод объектана на страничку сайта
