@@ -41,7 +41,7 @@ post '/place_order' do
 end
 
 post '/cart' do
-	@orders_input = params[:orders] # Получаем orders из параметров.
+	@orders_input = params[:orders_input] # Получаем orders из параметров.
 	@items = parse_orders_input @orders_input # Глобальная переменная коорую будем использовать во вьюхе
 
 	@items.each do |item| # Делаем запрос для каждого элемента
